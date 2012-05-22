@@ -1,0 +1,92 @@
+BODY {
+	font-size: 0.75em;
+	color: #25314e;
+	font-family: 宋体;
+	background-color: #FFFFFF;
+	margin-bottom: 0em;
+	margin-left: 0.5em;
+	margin-top: 0em;
+	margin-right: 0em;
+}
+
+INPUT {
+	font-size: 100%;
+}
+
+.topDiv {
+	float: top;
+	margin-bottom: 0em;
+	margin-left: 0em;
+	margin-top: 0em;
+	margin-right: 0em;
+	background: #328aa4 URL(tr_back.gif) repeat-x;
+	color: #FFFFFF;
+	padding: .5em;
+	border: 1px solid #FFFFFF;
+}
+
+.actionForm {
+	font: 100% Arial, Helvetica, sans-serif;
+	float: top;
+	margin-bottom: 0.5em;
+	margin-left: 0em;
+	margin-top: 0.5em;
+	margin-right: 0em;
+}
+
+.actionTable {
+	font: 100% Arial, Helvetica, sans-serif;
+}
+
+.actionTable TR{
+	font: 100% Arial, Helvetica, sans-serif;
+}
+
+.actionTable TD {
+	font: 100% Arial, Helvetica, sans-serif;
+}
+
+.dataList TABLE {
+	font: 100% Arial, Helvetica, sans-serif;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 0 0;
+}
+
+.dataList TH {
+	font: 100% Arial, Helvetica, sans-serif;
+	text-align: left;
+	padding: .5em;
+	border: 1px solid #FFFFFF;
+	background: #328aa4 URL(tr_back.gif) repeat-x;
+	color: #FFFFFF;
+	white-space: NOWRAP;
+}
+
+.dataList TD {
+	text-align: left;
+	padding: .5em;
+	border: 1px solid #FFFFFF;
+	font: 100% Arial, Helvetica, sans-serif;
+}
+
+.dataList TR {
+	background: #e5f1f4;
+}
+
+.button {
+	border-right: #2C59AA 1px solid;
+	padding-right: 2px;
+	border-top: #2C59AA 1px solid;
+	padding-left: 2px;
+	font-size: 12px;
+	FILTER: progid : DXImageTransform.Microsoft.Gradient ( GradientType = 0,
+		StartColorStr = #FFFFFF, EndColorStr = #C3DAF5 );
+	border-left: #2C59AA 1px solid;
+	cursor: pointer;
+	color: black;
+	padding-top: 2px;
+	border-bottom: #2C59AA 1px solid;
+	height: 21px;
+	width: 80px;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0//EN" "/xwork-validator-1.0.dtd">
+<validators>
+	<field name="code">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required" />
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="trim">true</param>
+			<param name="minLength">4</param>
+			<param name="maxLength">4</param>
+			<message key="error.codeValidate" />
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression">^[\x00-\xff]*$</param>
+			<message key="error.charNumber" />
+		</field-validator>
+	</field>
+	<field name="type">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required" />
+		</field-validator>
+	</field>
+</validators>

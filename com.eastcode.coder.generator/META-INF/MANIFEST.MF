@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.eastcode.coder.generator
+Bundle-SymbolicName: com.eastcode.coder.generator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.eastcode.coder.generator.Activator
+Bundle-Vendor: 东方代码
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ org.eclipse.jdt.core,
+ org.eclipse.jface.text;bundle-version="3.7.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/ojdbc14.jar,
+ .

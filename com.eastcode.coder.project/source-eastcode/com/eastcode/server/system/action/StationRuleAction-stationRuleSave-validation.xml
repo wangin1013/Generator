@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0//EN" "/xwork-validator-1.0.dtd">
+<validators>
+	<!-- Field-Validator Syntax -->
+	<field name="systemMenu.name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required" />
+		</field-validator>
+	</field>
+	<field name="station.name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required" />
+		</field-validator>
+	</field>
+</validators>

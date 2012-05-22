@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<package name="system" namespace="/admin/system" extends="admin">
+
+		<!-- 默认拦截器 -->
+		<default-interceptor-ref name="serverDefaultStack"></default-interceptor-ref>
+
+		<!-- 数据字典类型 -->
+		<action name="datatype" class="datatypeAction">
+			<result name="list">/server/system/datatype.jsp</result>
+		</action>
+		<action name="datatypeInsert" class="datatypeAction" method="insert">
+			<result name="input">/server/system/datatypeInsert.jsp</result>
+		</action>
+		<action name="datatypeUpdate" class="datatypeAction" method="update">
+			<result name="input">/server/system/datatypeInsert.jsp</result>
+		</action>
+		<action name="datatypeDetail" class="datatypeAction" method="detail">
+			<result name="detail">/server/system/datatypeDetail.jsp</result>
+		</action>
+		<action name="datatypeSave" class="datatypeAction" method="save">
+			<result name="detail">/server/system/datatypeDetail.jsp</result>
+			<result name="input">/server/system/datatypeInsert.jsp</result>
+		</action>
+		<action name="datatypeDelete" class="datatypeAction" method="delete">
+			<result name="list">/server/system/datatype.jsp</result>
+		</action>
+		<action name="datatypeDisable" class="datatypeAction" method="disable">
+			<result name="list">/server/system/datatype.jsp</result>
+		</action>
+
+		<!-- 数据字典数据 -->
+		<action name="basedata" class="basedataAction">
+			<result name="list">/server/system/basedata.jsp</result>
+		</action>
+		<action name="basedataInsert" class="basedataAction" method="insert">
+			<result name="input">/server/system/basedataInsert.jsp</result>
+		</action>
+		<action name="basedataUpdate" class="basedataAction" method="update">
+			<result name="input">/server/system/basedataInsert.jsp</result>
+		</action>
+		<action name="basedataDetail" class="basedataAction" method="detail">
+			<result name="detail">/server/system/basedataDetail.jsp</result>
+		</action>
+		<action name="basedataSave" class="basedataAction" method="save">
+			<result name="detail">/server/system/basedataDetail.jsp</result>
+			<result name="input">/server/system/basedataInsert.jsp</result>
+		</action>
+		<action name="basedataDelete" class="basedataAction" method="delete">
+			<result name="list">/server/system/basedata.jsp</result>
+		</action>
+		<action name="basedataDisable" class="basedataAction" method="disable">
+			<result name="list">/server/system/basedata.jsp</result>
+		</action>
+		
+		<!-- 系统参数 -->
+		<action name="systemParam" class="systemParamAction">
+			<result name="list">/server/system/systemParam.jsp</result>
+		</action>
+		<action name="systemParamInsert" class="systemParamAction" method="insert">
+			<result name="input">/server/system/systemParamInsert.jsp</result>
+		</action>
+		<action name="systemParamUpdate" class="systemParamAction" method="update">
+			<result name="input">/server/system/systemParamInsert.jsp</result>
+		</action>
+		<action name="systemParamDetail" class="systemParamAction" method="detail">
+			<result name="detail">/server/system/systemParamDetail.jsp</result>
+		</action>
+		<action name="systemParamSave" class="systemParamAction" method="save">
+			<result name="detail">/server/system/systemParamDetail.jsp</result>
+			<result name="input">/server/system/systemParamInsert.jsp</result>
+		</action>
+		<action name="systemParamDelete" class="systemParamAction" method="delete">
+			<result name="list">/server/system/systemParam.jsp</result>
+		</action>
+		<action name="systemParamDisable" class="systemParamAction" method="disable">
+			<result name="list">/server/system/systemParam.jsp</result>
+		</action>
+
+		<!-- 系统信息 -->
+		<action name="systemInfo" class="systemInfoAction">
+			<result name="list">/server/system/systemInfo.jsp</result>
+		</action>
+		<action name="systemInfoInsert" class="systemInfoAction" method="insert">
+			<result name="input">/server/system/systemInfoInsert.jsp</result>
+		</action>
+		<action name="systemInfoUpdate" class="systemInfoAction" method="update">
+			<result name="input">/server/system/systemInfoInsert.jsp</result>
+		</action>
+		<action name="systemInfoDetail" class="systemInfoAction" method="detail">
+			<result name="detail">/server/system/systemInfoDetail.jsp</result>
+		</action>
+		<action name="systemInfoSave" class="systemInfoAction" method="save">
+			<result name="detail">/server/system/systemInfoDetail.jsp</result>
+			<result name="input">/server/system/systemInfoInsert.jsp</result>
+		</action>
+		<action name="systemInfoDelete" class="systemInfoAction" method="delete">
+			<result name="list">/server/system/systemInfo.jsp</result>
+		</action>
+		<action name="systemInfoDisable" class="systemInfoAction" method="disable">
+			<result name="list">/server/system/systemInfo.jsp</result>
+		</action>
+		
+		<!-- 系统用户信息 -->
+		<action name="systemUser" class="systemUserAction">
+			<result name="list">/server/system/systemUser.jsp</result>
+		</action>
+		<action name="systemUserInsert" class="systemUserAction" method="insert">
+			<result name="input">/server/system/systemUserInsert.jsp</result>
+		</action>
+		<action name="systemUserUpdate" class="systemUserAction" method="update">
+			<result name="input">/server/system/systemUserInsert.jsp</result>
+		</action>
+		<action name="systemUserDetail" class="systemUserAction" method="detail">
+			<result name="detail">/server/system/systemUserDetail.jsp</result>
+		</action>
+		<action name="systemUserSave" class="systemUserAction" method="save">
+			<result name="detail">/server/system/systemUserDetail.jsp</result>
+			<result name="input">/server/system/systemUserInsert.jsp</result>
+		</action>
+		<action name="systemUserDelete" class="systemUserAction" method="delete">
+			<result name="list">/server/system/systemUser.jsp</result>
+		</action>
+		<action name="systemUserDisable" class="systemUserAction" method="disable">
+			<result name="list">/server/system/systemUser.jsp</result>
+		</action>
+		<action name="systemUserRef" class="systemUserAction">
+			<result name="list">/server/system/systemUserRef.jsp</result>
+		</action>
+		<action name="systemUserRelation" class="systemUserAction" method="saveStations">
+			<result name="detail">/server/system/systemUserDetail.jsp</result>
+		</action>
+		<action name="systemUserExtUpdate" class="systemUserAction" method="updateSelf">
+			<result>/server/system/systemUserUpdate.jsp</result>
+		</action>
+		<action name="systemUserExtSave" class="systemUserAction" method="save">
+			<result name="detail">/server/system/systemUserUpdate.jsp</result>
+			<result name="input">/server/system/systemUserUpdate.jsp</result>
+		</action>
+		
+		<!-- 系统岗位设置信息 -->
+		<action name="station" class="stationAction">
+			<result name="list">/server/system/station.jsp</result>
+		</action>
+		<action name="stationInsert" class="stationAction" method="insert">
+			<result name="input">/server/system/stationInsert.jsp</result>
+		</action>
+		<action name="stationUpdate" class="stationAction" method="update">
+			<result name="input">/server/system/stationInsert.jsp</result>
+		</action>
+		<action name="stationDetail" class="stationAction" method="detail">
+			<result name="detail">/server/system/stationDetail.jsp</result>
+		</action>
+		<action name="stationSave" class="stationAction" method="save">
+			<result name="detail">/server/system/stationDetail.jsp</result>
+			<result name="input">/server/system/stationInsert.jsp</result>
+		</action>
+		<action name="stationDelete" class="stationAction" method="delete">
+			<result name="list">/server/system/station.jsp</result>
+		</action>
+		<action name="stationDisable" class="stationAction" method="disable">
+			<result name="list">/server/system/station.jsp</result>
+		</action>
+		<action name="stationRef" class="stationAction">
+			<result name="list">/server/system/stationRef.jsp</result>
+		</action>
+		<action name="stationRelation" class="stationAction" method="saveSystemMenus">
+			<result name="detail">/server/system/stationDetail.jsp</result>
+		</action>
+		
+		<!--功能菜单管理-->
+		<action name="systemMenu" class="systemMenuAction">
+			<result name="list">/server/system/systemMenu.jsp</result>
+		</action>
+		<action name="systemMenuInsert" class="systemMenuAction" method="insert">
+			<result name="input">/server/system/systemMenuInsert.jsp</result>
+		</action>
+		<action name="systemMenuUpdate" class="systemMenuAction" method="update">
+			<result name="input">/server/system/systemMenuInsert.jsp</result>
+		</action>
+		<action name="systemMenuDetail" class="systemMenuAction" method="detail">
+			<result name="detail">/server/system/systemMenuDetail.jsp</result>
+		</action>
+		<action name="systemMenuSave" class="systemMenuAction" method="save">
+			<result name="detail">/server/system/systemMenuDetail.jsp</result>
+			<result name="input">/server/system/systemMenuInsert.jsp</result>
+		</action>
+		<action name="systemMenuDelete" class="systemMenuAction" method="delete">
+			<result name="list">/server/system/systemMenu.jsp</result>
+		</action>
+		<action name="systemMenuDisable" class="systemMenuAction" method="disable">
+			<result name="list">/server/system/systemMenu.jsp</result>
+		</action>
+		<action name="systemMenuRef" class="systemMenuAction">
+			<result name="list">/server/system/systemMenuRef.jsp</result>
+		</action>
+		
+		<!--岗位权限管理-->
+		<action name="stationRule" class="stationRuleAction">
+			<result name="list">/server/system/stationRule.jsp</result>
+		</action>
+		<action name="stationRuleInsert" class="stationRuleAction" method="insert">
+			<result name="input">/server/system/stationRuleInsert.jsp</result>
+		</action>
+		<action name="stationRuleUpdate" class="stationRuleAction" method="update">
+			<result name="input">/server/system/stationRuleInsert.jsp</result>
+		</action>
+		<action name="stationRuleDetail" class="stationRuleAction" method="detail">
+			<result name="detail">/server/system/stationRuleDetail.jsp</result>
+		</action>
+		<action name="stationRuleSave" class="stationRuleAction" method="save">
+			<result name="detail">/server/system/stationRuleDetail.jsp</result>
+			<result name="input">/server/system/stationRuleInsert.jsp</result>
+		</action>
+		<action name="stationRuleDelete" class="stationRuleAction" method="delete">
+			<result name="list">/server/system/stationRule.jsp</result>
+		</action>
+		<action name="stationRuleDisable" class="stationRuleAction" method="disable">
+			<result name="list">/server/system/stationRule.jsp</result>
+		</action>
+		
+		<!--账户岗位管理-->
+		<action name="systemUserStation" class="systemUserStationAction">
+			<result name="list">/server/system/systemUserStation.jsp</result>
+		</action>
+		<action name="systemUserStationInsert" class="systemUserStationAction" method="insert">
+			<result name="input">/server/system/systemUserStationInsert.jsp</result>
+		</action>
+		<action name="systemUserStationUpdate" class="systemUserStationAction" method="update">
+			<result name="input">/server/system/systemUserStationInsert.jsp</result>
+		</action>
+		<action name="systemUserStationDetail" class="systemUserStationAction" method="detail">
+			<result name="detail">/server/system/systemUserStationDetail.jsp</result>
+		</action>
+		<action name="systemUserStationSave" class="systemUserStationAction" method="save">
+			<result name="detail">/server/system/systemUserStationDetail.jsp</result>
+			<result name="input">/server/system/systemUserStationInsert.jsp</result>
+		</action>
+		<action name="systemUserStationDelete" class="systemUserStationAction" method="delete">
+			<result name="list">/server/system/systemUserStation.jsp</result>
+		</action>
+		<action name="systemUserStationDisable" class="systemUserStationAction" method="disable">
+			<result name="list">/server/system/systemUserStation.jsp</result>
+		</action>
+		
+		<!--广告管理-->
+		<action name="advertisement" class="advertisementAction">
+			<result name="list">/server/system/advertisement.jsp</result>
+		</action>
+		<action name="advertisementInsert" class="advertisementAction" method="insert">
+			<result name="input">/server/system/advertisementInsert.jsp</result>
+		</action>
+		<action name="advertisementUpdate" class="advertisementAction" method="update">
+			<result name="input">/server/system/advertisementInsert.jsp</result>
+		</action>
+		<action name="advertisementDetail" class="advertisementAction" method="detail">
+			<result name="detail">/server/system/advertisementDetail.jsp</result>
+		</action>
+		<action name="advertisementSave" class="advertisementAction" method="save">
+			<result name="detail">/server/system/advertisementDetail.jsp</result>
+			<result name="input">/server/system/advertisementInsert.jsp</result>
+		</action>
+		<action name="advertisementDelete" class="advertisementAction" method="delete">
+			<result name="list">/server/system/advertisement.jsp</result>
+		</action>
+		<action name="advertisementDisable" class="advertisementAction" method="disable">
+			<result name="list">/server/system/advertisement.jsp</result>
+		</action>
+		
+		<!--友情链接管理-->
+		<action name="friendLink" class="friendLinkAction">
+			<result name="list">/server/system/friendLink.jsp</result>
+		</action>
+		<action name="friendLinkInsert" class="friendLinkAction" method="insert">
+			<result name="input">/server/system/friendLinkInsert.jsp</result>
+		</action>
+		<action name="friendLinkUpdate" class="friendLinkAction" method="update">
+			<result name="input">/server/system/friendLinkInsert.jsp</result>
+		</action>
+		<action name="friendLinkDetail" class="friendLinkAction" method="detail">
+			<result name="detail">/server/system/friendLinkDetail.jsp</result>
+		</action>
+		<action name="friendLinkSave" class="friendLinkAction" method="save">
+			<result name="detail">/server/system/friendLinkDetail.jsp</result>
+			<result name="input">/server/system/friendLinkInsert.jsp</result>
+		</action>
+		<action name="friendLinkDelete" class="friendLinkAction" method="delete">
+			<result name="list">/server/system/friendLink.jsp</result>
+		</action>
+		<action name="friendLinkDisable" class="friendLinkAction" method="disable">
+			<result name="list">/server/system/friendLink.jsp</result>
+		</action>
+	</package>
+</struts>

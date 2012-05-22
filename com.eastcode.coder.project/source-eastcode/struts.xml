@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+
+	<constant name="struts.multipart.maxSize" value="1000000000"></constant>
+
+	<constant name="struts.action.extension" value="shtml,action" />
+
+	<include file="server.xml" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<!--平台前端默认控制器 -->
+		<default-action-ref name="index" ></default-action-ref>
+
+		<!-- 前台默认分发器 -->
+		<action name="index" class="dispatchAction" >
+			<result type="chain">
+				<param name="actionName">${actionName}</param>
+				<param name="namespace">${namespace}</param>
+			</result>
+		</action>
+
+		<!-- 后台管理跳转 -->
+		<action name="admin">
+			<result type="chain">
+				<param name="actionName">mainAction</param>
+				<param name="namespace">/admin</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

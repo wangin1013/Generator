@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="东方代码"
+            id="com.eastcode.coder">
+      </category>
+      <wizard
+            name="SSH2工程生成"
+            icon="icons/sample.gif"
+            category="com.eastcode.coder"
+            class="com.eastcode.coder.project.wizards.DynamicWebProjectWizard"
+            id="com.eastcode.coder.project.wizards.DynamicWebProjectWizard">
+      </wizard>
+   </extension>
+
+</plugin>

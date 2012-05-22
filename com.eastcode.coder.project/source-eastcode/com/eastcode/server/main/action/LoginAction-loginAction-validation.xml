@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0//EN" "/xwork-validator-1.0.dtd">
+<validators>
+	<field name="userId">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.userId" />
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<message key="error.required.password" />
+		</field-validator>
+	</field>
+</validators>

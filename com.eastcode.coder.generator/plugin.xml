@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="东方代码"
+            id="com.eastcode.coder">
+      </category>
+      <wizard
+            name="SSH2代码创建"
+            icon="icons/sample.gif"
+            category="com.eastcode.coder"
+            class="com.eastcode.coder.generator.wizards.SampleNewWizard"
+            id="com.eastcode.coder.generator.wizards.SampleNewWizard">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.jdt.core.codeFormatter">
+   </extension>
+   <extension
+         point="org.eclipse.wst.common.project.facet.core.facets">
+   </extension>
+
+</plugin>

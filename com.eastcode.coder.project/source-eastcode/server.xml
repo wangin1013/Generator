@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<include file="system.xml" />
+
+	<package name="admin" namespace="/admin" extends="default">
+		<interceptors>
+			<!-- 后台权限拦截器 -->
+			<interceptor name="permissionInterceptor"
+				class="com.eastcode.server.interceptor.PermissionInterceptor">
+			</interceptor>
+
+			<!-- 含有Struts2默认拦截器的后台拦截器栈 -->
+			<interceptor-stack name="serverDefaultStack">
+				<interceptor-ref name="permissionInterceptor"></interceptor-ref>
+				<interceptor-ref name="paramsPrepareParamsStack"></interceptor-ref>
+
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 后台主流程Action -->
+		<default-action-ref name="mainAction"></default-action-ref>
+
+		<!-- 全局跳转 -->
+		<global-results>
+			<result name="login">/server/login.jsp</result>
+			<result name="error">/server/error.jsp</result>
+		</global-results>
+
+		<!-- 全局异常处理 -->
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+
+		<action name="mainAction" class="mainAction">
+			<interceptor-ref name="serverDefaultStack"></interceptor-ref>
+			<result name="main">/server/main.jsp</result>
+		</action>
+		
+		<!-- 后台登陆Action -->
+		<action name="loginAction" class="loginAction">
+			<interceptor-ref name="paramsPrepareParamsStack"></interceptor-ref>
+			<result type="chain" name="main">mainAction</result>
+			<result name="input">/server/login.jsp</result>
+		</action>
+
+		<!-- 后台退出Action -->
+		<action name="logoutAction" class="loginAction" method="logout">
+			<interceptor-ref name="paramsPrepareParamsStack"></interceptor-ref>
+			<result name="login">/server/login.jsp</result>
+		</action>
+	</package>
+
+</struts>
